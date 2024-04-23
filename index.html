@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Popup Box-->
+        <div class="popup">
+            <h1>Tic Tac Toe</h1>
+            <div class="round">
+                <p>Rounds : </p>
+                <button id="round">1</button>
+                <button id="round">2</button>
+                <button id="round">3</button>
+                <button id="round">5</button>
+                <button id="round">10</button>
+            </div>
+
+            <button id="play" disabled>Play</button>
+        </div>
+
+        <div class="texts">
+            <h1 id="turn">Turn :<ion-icon name="ellipse-outline" id="circle"></ion-icon></h1>
+            <h1 id="score"><p>Score : <ion-icon name="close-outline" id="cross"></ion-icon>: 0 </p> <br> <p><ion-icon name="ellipse-outline" id="circle"></ion-icon>: 0</p></h1>
+        </div>
+        
+        <div class="main">
+
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <h1 id="totalRounds">Rounds : 0</h1>
+        <p id="creator"></p>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="script.js"></script>
+</html>

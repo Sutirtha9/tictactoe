@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Neue", cursive;
+    font-weight: 800;
+}
+body
+{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#17b5ff,#ff6464);
+}
+div.main
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+div.box
+{
+    height: 100px;
+    width: 100px;
+}
+div.box:hover
+{
+    cursor: pointer;
+}
+/*Box Borders*/
+div.box:nth-child(1),div.box:nth-child(2),div.box:nth-child(4),div.box:nth-child(5)
+{
+    border-right: 6px solid #000;
+    border-bottom: 6px solid #000;
+}
+div.box:nth-child(3),div.box:nth-child(6)
+{
+    border-bottom: 6px solid #000;
+}
+div.box:nth-child(7),div.box:nth-child(8)
+{
+    border-right: 6px solid #000;
+}
+
+#cross
+{
+    color: #ff6464;
+    font-size: 100px;
+}
+#circle
+{
+    color: #17b5ff;
+    font-size: 100px;
+}
+.popup
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #7bcaff;
+    border: none;
+    border-radius: 20px;
+    align-items: center;
+}
+.popup h1
+{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+.popup p
+{
+    font-size: 25px;
+    padding-right: 10px;
+}
+.winButtons
+{
+    margin-top: 20px;
+}
+.winButtons #home,.winButtons #nextRound
+{
+    padding: 15px 30px;
+    background: none;
+    border: 2px solid #003750;
+    color: #003750;
+    border-radius: 50px;
+    font-size: 18px;
+}
+.winButtons #home:hover,.winButtons #nextRound:hover
+{
+    cursor: pointer;
+    background-color: #003750;
+    color: #7bcaff;
+}
+.winButtons #home
+{
+    margin-right: 150px;
+}
+.popup .round
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.round #round
+{
+    font-size: 17px;
+    margin-right: 5px;
+    padding: 10px 15px;
+    background: none;
+    color: #a6ff9e;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    transition: all 0.1s;
+}
+.round #round:hover
+{
+    cursor: pointer;
+    background-color: #00ff00;
+    color: #007a10;
+}
+.round #round.on
+{
+    background-color: #00ff00;
+    color: #007a10;
+}
+.popup #play
+{
+    padding: 8px 24px;
+    font-size: 17px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: all 0.1s;
+}
+.popup #play:hover
+{
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+}
+.texts
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding-left: 50px;
+    visibility: hidden;
+}
+.texts ion-icon
+{
+    scale: 0.7;
+    transform: translateX(-30px);
+    transition: all 0.2s;
+}
+h1#turn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: 10px;
+    padding-right: 50px;
+}
+h1#turn ion-icon
+{
+    padding-left: 10px;
+}
+h1#score
+{
+    display: flex;
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    padding-bottom: 150px;
+    padding-left: 100px;
+
+}
+h1#score ion-icon
+{
+    transform: translateY(55px);
+}
+h1#score p
+{
+    height: 20px;
+}
+h1#score p:nth-child(3)
+{
+    transform: translateX(99px);
+}
+h1#totalRounds
+{
+    visibility: hidden;
+}
+#creator
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
